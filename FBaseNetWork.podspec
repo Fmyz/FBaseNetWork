@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FBaseNetWork"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "简单封装 七牛及AFNetworking"
 
   s.homepage     = "https://github.com/Fmyz/FBaseNetWork.git"
@@ -28,12 +28,18 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
 
   s.source       = { :git => "https://github.com/Fmyz/FBaseNetWork.git", :tag => "#{s.version}" }
+  s.requires_arc = true
 
-  s.source_files  = "NetWork/**/*.{h,m}"
+  s.source_files  = "NetWork/FBaseNetWork.h"
 
-  s.frameworks = "UIKit", "Foundation"
+  s.subspec 'Base_AFNetwork' do |ss|
+    ss.source_files  = "NetWork/TSBaseJsonRequest.{h,m}", "NetWork/TSReachability.{h,m}"
+    ss.dependency "AFNetworking", "~> 3.1.0"
+  end
 
-  s.dependency "AFNetworking", "~> 3.1.0"
-  s.dependency "Qiniu", "~> 7.1.0.1"
+  s.subspec 'Base_Qiniu' do |ss|
+    ss.source_files  = "NetWork/TSQiniuUploader.{h,m}"
+    ss.dependency "Qiniu", "~> 7.1.0.1"
+  end
 
 end
