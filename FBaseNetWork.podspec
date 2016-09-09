@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FBaseNetWork"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "简单封装 七牛及AFNetworking"
 
   s.homepage     = "https://github.com/Fmyz/FBaseNetWork.git"
