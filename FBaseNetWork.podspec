@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FBaseNetWork"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "简单封装 七牛及AFNetworking"
 
   s.homepage     = "https://github.com/Fmyz/FBaseNetWork.git"
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
 
   s.author    = "Fmyz"
 
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "7.0"
 
   s.source       = { :git => "https://github.com/Fmyz/FBaseNetWork.git", :tag => "#{s.version}" }
   s.requires_arc = true
